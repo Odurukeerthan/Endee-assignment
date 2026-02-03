@@ -1,0 +1,15 @@
+services:
+  endee:
+    image: endeeio/endee-server:latest
+    container_name: endee-server
+    ports:
+      - "8090:8080"
+    environment:
+      # Use 0 to let Endee auto-detect threads
+      NDD_NUM_THREADS: 0
+      # We set a simple token for this assignment
+      NDD_AUTH_TOKEN: "admin-secret-123"
+    volumes:
+      # Maps the Windows folder 'endee-data' to the container's data folder
+      - ./endee-data:/data
+    restart: unless-stopped

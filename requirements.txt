@@ -1,0 +1,6 @@
+requests
+msgpack
+sentence-transformers
+streamlit
+numpy
+torch
