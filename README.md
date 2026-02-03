@@ -62,7 +62,7 @@ cd endee-assignment
 
 ### 2. Environment Setup
 
-- **Create a virtual environment to keep dependencies isolated:
+Create a virtual environment to keep dependencies isolated:
 
 ```bash
 # Windows
@@ -74,7 +74,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-- **Install the required libraries:
+Install the required libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -82,7 +82,7 @@ pip install -r requirements.txt
 
 ### 3. Start the Database
 
-- **Launch the Endee server using Docker Compose. This starts the service on port 8090.
+Launch the Endee server using Docker Compose. This starts the service on port 8090.
 
 ```bash
 docker compose up -d
@@ -91,28 +91,34 @@ docker compose up -d
 ## ⚡ Usage Guide
 
 ### Step 1: Ingest Data
-- **Before searching, you must populate the database. Run the ingestion script to index the sample dataset:
+
+- \*\*Before searching, you must populate the database. Run the ingestion script to index the sample dataset:
+
 ```bash
 python src/ingest.py
 ```
 
-- *Expected Output: ✅ Index created successfully!
+Expected Output: ✅ Index created successfully!
 
 ### Step 2: Run the Web Interface
-- **Launch the Streamlit application to interact with the database:
+
+- \*\*Launch the Streamlit application to interact with the database:
 
 ```bash
 streamlit run src/app.py
 ```
 
-- **The application will open automatically at http://localhost:8501.
+The application will open automatically at http://localhost:8501.
 
 ## 🧠 Implementation Details
+
 ### Why MessagePack?
-- **Endee is optimized for SIMD and high-performance throughput. To minimize serialization overhead, it returns search results in MessagePack (binary) format rather than JSON. This project explicitly handles this by using the msgpack Python library to deserialize responses efficiently.
+
+Endee is optimized for SIMD and high-performance throughput. To minimize serialization overhead, it returns search results in MessagePack (binary) format rather than JSON. This project explicitly handles this by using the msgpack Python library to deserialize responses efficiently.
 
 ### Index Configuration
-- **The vector index is strictly typed to match the embedding model:
+
+The vector index is strictly typed to match the embedding model:
 
 - Dimensions: 384 (Matched to MiniLM-L6-v2)
 
@@ -122,13 +128,16 @@ streamlit run src/app.py
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+```text
 endee-assignment/
 ├── src/
 │   ├── app.py             # Frontend UI (Streamlit)
-│   ├── ingest.py          # ETL Script (Data loading)
+│   ├── ingest.py          # ETL Scrip   (Data loading)
 │   └── search.py          # Core retrieval logic
 ├── docker-compose.yaml    # Container configuration
 ├── requirements.txt       # Python dependencies
 ├── README.md              # Project documentation
 └── screenshot.png         # Proof of execution
-
+```
