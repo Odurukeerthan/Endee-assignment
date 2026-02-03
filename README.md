@@ -1,6 +1,6 @@
 # Endee Semantic Search Engine
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](Screenshot.png)
 
 ## 📖 Overview
 
@@ -56,7 +56,7 @@ The project follows a standard ETL (Extract, Transform, Load) and Retrieval patt
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_REPO_LINK_HERE>
+git clone https://github.com/Odurukeerthan/Endee-assignment
 cd endee-assignment
 
 ### 2. Environment Setup
