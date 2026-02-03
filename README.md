@@ -58,6 +58,7 @@ The project follows a standard ETL (Extract, Transform, Load) and Retrieval patt
 ```bash
 git clone https://github.com/Odurukeerthan/Endee-assignment
 cd endee-assignment
+```
 
 ### 2. Environment Setup
 
@@ -71,11 +72,13 @@ python -m venv venv
 # Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
+```
 
 - **Install the required libraries:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ### 3. Start the Database
 
@@ -83,6 +86,7 @@ pip install -r requirements.txt
 
 ```bash
 docker compose up -d
+```
 
 ## ⚡ Usage Guide
 
@@ -90,6 +94,7 @@ docker compose up -d
 - **Before searching, you must populate the database. Run the ingestion script to index the sample dataset:
 ```bash
 python src/ingest.py
+```
 
 - *Expected Output: ✅ Index created successfully!
 
@@ -98,6 +103,7 @@ python src/ingest.py
 
 ```bash
 streamlit run src/app.py
+```
 
 - **The application will open automatically at http://localhost:8501.
 
