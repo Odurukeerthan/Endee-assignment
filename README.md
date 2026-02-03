@@ -128,8 +128,6 @@ The vector index is strictly typed to match the embedding model:
 
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ```text
 endee-assignment/
 ├── src/
